@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Counterparty name:</strong>
+  <%= @transaction.counterparty_name %>
+</p>
+
+<p>
+  <strong>Counterparty iban:</strong>
+  <%= @transaction.counterparty_iban %>
+</p>
+
+<p>
+  <strong>Counterparty bic:</strong>
+  <%= @transaction.counterparty_bic %>
+</p>
+
+<p>
+  <strong>Amount cents:</strong>
+  <%= @transaction.amount_cents %>
+</p>
+
+<p>
+  <strong>Amount currency:</strong>
+  <%= @transaction.amount_currency %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @transaction.description %>
+</p>
+
+<p>
+  <strong>Bank account:</strong>
+  <%= @transaction.bank_account_id %>
+</p>
+
+<%= link_to 'Edit', edit_transaction_path(@transaction) %> |
+<%= link_to 'Back', transactions_path %>

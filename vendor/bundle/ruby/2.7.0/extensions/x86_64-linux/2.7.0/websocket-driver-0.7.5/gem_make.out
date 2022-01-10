@@ -1,0 +1,15 @@
+current directory: /home/suprun/ruby_work/bulk_service/vendor/bundle/ruby/2.7.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+/home/suprun/.rvm/rubies/ruby-2.7.1/bin/ruby -I /home/suprun/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0 -r ./siteconf20220109-5366-hdc3mi.rb extconf.rb
+creating Makefile
+
+current directory: /home/suprun/ruby_work/bulk_service/vendor/bundle/ruby/2.7.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /home/suprun/ruby_work/bulk_service/vendor/bundle/ruby/2.7.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.so
+
+current directory: /home/suprun/ruby_work/bulk_service/vendor/bundle/ruby/2.7.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -m 0755 websocket_mask.so ./.gem.20220109-5366-b5p93y

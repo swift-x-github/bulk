@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Transactions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Counterparty name</th>
+      <th>Counterparty iban</th>
+      <th>Counterparty bic</th>
+      <th>Amount cents</th>
+      <th>Amount currency</th>
+      <th>Description</th>
+      <th>Bank account</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @transactions.each do |transaction| %>
+      <tr>
+        <td><%= transaction.counterparty_name %></td>
+        <td><%= transaction.counterparty_iban %></td>
+        <td><%= transaction.counterparty_bic %></td>
+        <td><%= transaction.amount_cents %></td>
+        <td><%= transaction.amount_currency %></td>
+        <td><%= transaction.description %></td>
+        <td><%= transaction.bank_account.organization_name %></td>
+        <td><%= link_to 'Show', transaction %></td>
+        <td><%= link_to 'Edit', edit_transaction_path(transaction) %></td>
+        <td><%= link_to 'Destroy', transaction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Transaction', new_transaction_path %>

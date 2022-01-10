@@ -1,0 +1,52 @@
+<%= form_with(model: transaction, local: true) do |form| %>
+  <% if transaction.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(transaction.errors.count, "error") %> prohibited this transaction from being saved:</h2>
+
+      <ul>
+        <% transaction.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :counterparty_name %>
+    <%= form.text_field :counterparty_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :counterparty_iban %>
+    <%= form.text_field :counterparty_iban %>
+  </div>
+
+  <div class="field">
+    <%= form.label :counterparty_bic %>
+    <%= form.text_field :counterparty_bic %>
+  </div>
+
+  <div class="field">
+    <%= form.label :amount_cents %>
+    <%= form.number_field :amount_cents %>
+  </div>
+
+  <div class="field">
+    <%= form.label :amount_currency %>
+    <%= form.text_field :amount_currency %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bank_account_id %>
+    <%= form.text_field :bank_account_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
